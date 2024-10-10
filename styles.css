@@ -1,0 +1,227 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #2E8B57;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+    margin-left: 20px;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Clear floats */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #FF8C00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #e07b00;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+}
+
+.about, .contact {
+    background: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2E8B57;
+}
+
+.about p, .contact form p {
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Initiatives */
+.initiatives .initiative-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.initiatives .initiative {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.initiatives .initiative h3 {
+    color: #2E8B57;
+    margin-bottom: 10px;
+}
+
+.initiatives .initiative p {
+    color: #555;
+}
+
+/* Contact Form */
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    margin-top: 10px;
+    background: #2E8B57;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background: #276749;
+}
+
+/* Footer */
+footer {
+    background: #2E8B57;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .initiatives .initiative {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .initiatives .initiative {
+        width: 100%;
+    }
+
+    header h1, nav {
+        float: none;
+        text-align: center;
+    }
+
+    header::after {
+        display: none;
+    }
+}
